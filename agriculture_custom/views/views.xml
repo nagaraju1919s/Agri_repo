@@ -1,0 +1,17 @@
+<odoo>
+    <record id="view_crop_requests_form_inherited" model="ir.ui.view">
+        <field name="name">crop.requests.inherited</field>
+        <field name="model">crop.requests</field>
+        <field name="inherit_id" ref="agriculture_management_odoo.view_crop_request_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='tags_id']"  position="after">
+                <group>
+                    <field name = "from_beds"/>
+                </group>
+                <group>
+                    <field name = "to_beds"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
